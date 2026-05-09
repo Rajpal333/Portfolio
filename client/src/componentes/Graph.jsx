@@ -7,22 +7,43 @@ const Graph = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  // const fetchGraph = () => {
+  //   setLoading(true);
+  //   setError(false);
+
+  //   axios.get("http://127.0.0.1:8000/graph")
+  //     .then(res => {
+  //       setImage(res.data.image);
+  //       setLoading(false);
+  //     })
+  //     .catch(err => {
+  //       console.error(err);
+  //       setError(true);
+  //       setLoading(false);
+  //     });
+  // };
+
+
   const fetchGraph = () => {
-    setLoading(true);
-    setError(false);
+  setLoading(true);
+  setError(false);
 
-    axios.get("http://127.0.0.1:8000/graph")
-      .then(res => {
-        setImage(res.data.image);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error(err);
-        setError(true);
-        setLoading(false);
-      });
-  };
-
+  axios.get(
+    "https://portfolio-python-service.onrender.com/graph",
+    {
+      timeout: 30000,
+    }
+  )
+    .then(res => {
+      setImage(res.data.image);
+      setLoading(false);
+    })
+    .catch(err => {
+      console.error(err);
+      setError(true);
+      setLoading(false);
+    });
+};
   useEffect(() => {
     fetchGraph();
   }, []);
