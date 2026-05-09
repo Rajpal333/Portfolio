@@ -1,11 +1,7 @@
 // const Project = require("../models/Project");
-<<<<<<< HEAD
-  // const roject = require("../models/project")
-    const project = require("../models/Project")
-  
-=======
-   const Project = require("../models/project")
->>>>>>> baf2089ec04c597006ddd07baab45adb7339241b
+
+  const Project = require("../models/project")
+
 
 // CREATE Project
 exports.createProject = async (req, res) => {
