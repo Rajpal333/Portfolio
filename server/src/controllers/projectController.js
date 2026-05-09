@@ -1,9 +1,12 @@
 // const Project = require("../models/Project");
-  const Project = require("../models/project")
+  // const roject = require("../models/project")
+    const project = require("../models/Project")
+  
 
 // CREATE Project
 exports.createProject = async (req, res) => {
   try {
+    
     const project = new Project(req.body);
     const saved = await project.save();
     res.status(201).json(saved);
