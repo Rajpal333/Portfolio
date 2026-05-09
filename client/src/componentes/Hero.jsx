@@ -43,7 +43,7 @@ const Hero = () => {
           <p className="mt-4 text-gray-400">{summary}</p>
 
           <div className="mt-6 flex gap-4">
-            <a href="/projects" className="px-6 py-3 bg-blue-600 rounded-xl">
+            <a href="/project" className="px-6 py-3 bg-blue-600 rounded-xl">
               View Projects
             </a>
 
