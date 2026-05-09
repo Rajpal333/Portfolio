@@ -1,5 +1,5 @@
 // const Project = require("../models/Project");
-   const Project = require("../models/Project")
+   const Project = require("../models/project")
 
 // CREATE Project
 exports.createProject = async (req, res) => {
