@@ -1,5 +1,5 @@
 // const Profile = require("../models/Profile");
-   const Profile = require("../models/Profile")
+   const Profile = require("../models/profile")
 
 // 👉 CREATE Profile
 exports.createProfile = async (req, res) => {
